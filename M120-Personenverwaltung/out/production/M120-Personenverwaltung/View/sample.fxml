@@ -1,0 +1,29 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ComboBox?>
+<GridPane fx:controller="View.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <children>
+        <Label text="Start " textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="0"></Label>
+        <DatePicker fx:id="startDate" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="0"></DatePicker>
+        <TextField fx:id="startTime" prefWidth="60" GridPane.columnIndex="2" GridPane.rowIndex="0"></TextField>
+
+        <Label text="End " textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="1"></Label>
+        <DatePicker fx:id="endDate" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="1"></DatePicker>
+        <TextField fx:id="endTime" prefWidth="60" GridPane.columnIndex="2" GridPane.rowIndex="1"></TextField>
+
+        <Label text="Task " textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="3"></Label>
+        <ComboBox fx:id="projectList" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" ></ComboBox>
+
+        <Label text="Subject " textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="4"></Label>
+        <TextField fx:id="subject" prefWidth="60" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="2"></TextField>
+
+        <Button text="Save" fx:id="saveWorkLog" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5"></Button>
+    </children>
+</GridPane>
