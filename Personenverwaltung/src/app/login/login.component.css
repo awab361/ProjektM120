@@ -1,0 +1,35 @@
+  #loginbtn {   
+         background-color: #2470ff;   
+         width: 20%;  
+          color: #ffffff;   
+          padding: 15px;   
+          font-size: 16px;
+          margin: 10px 0px;   
+          border: none;   
+          cursor: pointer;   
+           }   
+
+    .buttondiv{
+        text-align: left;
+    }
+   form {   
+          border: 150px solid #f1f1f1;   
+      }   
+   input[type=text], input[type=password] {   
+          width: 70%;   
+          margin: 8px 0;  
+          padding: 12px 20px;   
+          display: inline-block;   
+          border: 2px solid #2470ff;   
+          box-sizing: border-box;   
+      }  
+   button:hover {   
+          opacity: 0.7;   
+      }   
+          
+       
+   .container {   
+          padding: 100px;   
+          background-color: #ffffff;  
+          border: 2px solid #2470ff;  
+      }   
