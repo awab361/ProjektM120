@@ -25,7 +25,7 @@
     background-color: #04AA6D;
     color: white;
   }
-/* Right-aligned section inside the top navigation */
-.topnav-right {
-    float: right;
+  #imgDiv{
+      margin-left: 40%;
+      margin-top: 200px;
   }
