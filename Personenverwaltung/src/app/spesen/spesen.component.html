@@ -1,0 +1,44 @@
+<div class="topnav">
+    <h1> Chur Tech </h1>
+    <a routerLink="/menu"class="active">Home</a>
+    <a routerLink="/menu/ueberuns">Über uns</a>
+    <a routerLink="/menu/kontakt">Kontakt</a>
+    <a routerLink="/menu/info">Info</a>
+    <div class="topnav-right">
+        <a routerLink="/" id="abmelden">abmelden</a>
+    </div>
+  </div>
+  <div id="spesenMenu" *ngIf="this.menuVisible"> 
+    <a role="button" (click)="this.commingSoonVisible = true" (click)="this.menuVisible = false" routerLink="/menu/spesen"> <!-- This button hides the menu and shows comming soon instead by changing the bools -->
+<div class="menuBtnsDiv" id="firstMenuDiv">
+  <a class="menuBtns">Alle Spesen von einem person anzeigen</a>
+</div>
+</a>
+
+<a role="button" (click)="this.commingSoonVisible = true" (click)="this.menuVisible = false" routerLink="/menu/spesen"> <!-- This button hides the menu and shows comming soon instead by changing the bools -->
+<div class="menuBtnsDiv">
+  <a class="menuBtns">Eigene Spesen anzeigen</a>
+</div>
+</a>
+<a role="button" (click)="this.commingSoonVisible = true" (click)="this.menuVisible = false" routerLink="/menu/spesen"> <!-- This button hides the menu and shows comming soon instead by changing the bools -->
+<div class="menuBtnsDiv">
+    <a class="menuBtns">Neue Spese erstellen</a>
+  </div>
+</a>
+<a routerLink="/menu">
+  <div class="menuBtnsDiv" id="backBtn">
+      <a class="menuBtns">Zurück</a>
+  </div>
+  </a>
+</div>
+<div *ngIf="this.commingSoonVisible">
+  <h1>COMMING SOON!</h1>
+  <a role="button" (click)="this.commingSoonVisible = false" (click)="this.menuVisible = true" routerLink="/menu/spesen"> <!-- This button hides Comming soon and shows the menu again -->
+      <div class="menuBtnsDiv" id="backBtnListCS">
+          <a class="menuBtns">Zurück</a>
+      </div>
+  </a>
+</div>
+
+
+

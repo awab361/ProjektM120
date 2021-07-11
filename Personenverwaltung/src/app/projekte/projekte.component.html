@@ -1,0 +1,40 @@
+<div class="topnav">
+    <h1> Chur Tech </h1>
+    <a routerLink="/menu"class="active">Home</a>
+    <a routerLink="/menu/ueberuns">Über uns</a>
+    <a routerLink="/menu/kontakt">Kontakt</a>
+    <a routerLink="/menu/info">Info</a>
+    <div class="topnav-right">
+        <a routerLink="/" id="abmelden">abmelden</a>
+    </div>
+  </div>
+  <div id="projectsMenu" *ngIf="this.menuVisible"> 
+<a role="button" (click)="this.projectsListVisible = true" (click)="this.menuVisible = false" routerLink="/menu/projekte"> <!-- This button hides the menu and shows the list by changing the bools -->
+<div class="menuBtnsDiv" id="firstMenuDiv">
+  <a class="menuBtns">Projekte anzeigen</a>
+</div>
+</a>
+  <a routerLink="/menu">
+<div class="menuBtnsDiv" id="backBtn">
+    <a class="menuBtns">Zurück</a>
+</div>
+</a>
+</div>
+
+<div id="projectsList" *ngIf="this.projectsListVisible"> 
+  <a role="button" (click)="this.projectsListVisible = false" (click)="this.menuVisible = true" routerLink="/menu/projekte">
+  <div class="menuBtnsDiv" id="backBtnList">
+      <a class="menuBtns">Zurück</a>
+  </div>
+  </a>
+  <ul>
+      <li *ngFor="let project of projects"> <!-- Thats a for loop to loop through the projects -->
+        <div class="projectObj">
+                <h2>{{project.projectName}}<br></h2>
+                <p><strong>Dauer: </strong>{{project.duration}} <br></p>
+                <p><strong>Wert: </strong>{{project.Value}}.- <br></p>
+                <p><strong>Abgabedatum: </strong>{{project.submissionDate}} <br></p>
+          </div>
+      </li>   
+    </ul>
+</div>

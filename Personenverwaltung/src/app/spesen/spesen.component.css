@@ -32,11 +32,10 @@
   a:link {
     text-decoration: none;
   }
-/* change the top distance in home page.*/
+  
   #firstMenuDiv{
     margin-top: 40px;
   }
-/* added background color, height, width and distance in HOme Page.*/
   .menuBtnsDiv{
     margin-top:20px ;
     height: 50px;
@@ -50,12 +49,29 @@
     background-color: #04AA6D;
     color: black;
   }
-/* added text size, color, decoration and distance in main Menu*/
+
   .menuBtnsDiv a{
     margin-top: 20px;
     color: #f2f2f2;
     text-align: center;
     padding: 16px;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 17px;
   }
+
+  #backBtn{
+      width: 150px;
+      background-color: #ff0000;
+  }
+  #backBtn:hover{
+    width: 150px;
+    background-color: #ff584a;
+}
+#backBtnListCS{
+    width: 150px;
+    background-color: #ff0000;
+}
+#backBtnListCS:hover{
+    width: 150px;
+    background-color: #ff584a;
+}

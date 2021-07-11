@@ -1,0 +1,60 @@
+<div class="topnav">
+    <h1> Chur Tech </h1>
+    <a routerLink="/menu"class="active">Home</a>
+    <a routerLink="/menu/ueberuns">Über uns</a>
+    <a routerLink="/menu/kontakt">Kontakt</a>
+    <a routerLink="/menu/info">Info</a>
+    <div class="topnav-right">
+        <a routerLink="/" id="abmelden">abmelden</a>
+    </div>
+  </div>
+<div id="personsMenu" *ngIf="this.menuVisible"> 
+
+<a role="button" (click)="this.personsListVisible = true" (click)="this.menuVisible = false" routerLink="/menu/personen"> <!-- This button hides the menu and shows the list by changing the bools -->
+<div class="menuBtnsDiv" id="firstMenuDiv">
+  <a class="menuBtns">Personen  Liste</a>
+</div>
+</a>
+<a role="button" (click)="this.commingSoonVisible = true" (click)="this.menuVisible = false" routerLink="/menu/personen"> <!-- This button hides the menu and shows comming soon instead by changing the bools -->
+<div class="menuBtnsDiv">
+  <a class="menuBtns">Neue Person hinzufügen</a>
+</div>
+</a>
+<a routerLink="/menu">
+<div class="menuBtnsDiv" id="backBtn">
+    <a class="menuBtns">Zurück</a>
+</div>
+</a>
+</div>
+<div id="personsList" *ngIf="this.personsListVisible"> 
+    <a role="button" (click)="this.personsListVisible = false" (click)="this.menuVisible = true" routerLink="/menu/personen"> <!-- This button hides the list and shows the menu instead by changing the bools -->
+    <div class="menuBtnsDiv" id="backBtnList">
+        <a class="menuBtns">Zurück</a>
+    </div>
+    </a>
+    <ul>
+        <li *ngFor="let person of persons"> <!-- Thats a for loop to loop through the Persons -->
+            <div class="personObj">
+                <h2>{{person.name}} {{person.firstName}} <br></h2>
+                <p><strong>Geburtsdatum: </strong>{{person.birthdate}} <br></p>
+                <p><strong>Beitrittsdatum: </strong>{{person.joinDate}} <br></p>
+                <p><strong>Kononummer: </strong>{{person.bankNum}} <br></p>
+                <p><strong>Lohn: </strong>{{person.sellary}}.- <br></p>
+                <p><strong>Strasse: </strong>{{person.street}} <br></p>
+                <p><strong>Plz: </strong>{{person.plz}} <br></p>
+                <p><strong>Ort: </strong>{{person.city}} <br></p>
+                <p><strong>Email: </strong><a href="mailto:{{person.email}}">{{person.email}}</a></p>
+            </div> 
+        </li>   
+    </ul>
+</div>
+<div *ngIf="this.commingSoonVisible">
+    <h1>COMMING SOON!</h1>
+
+    <a role="button" (click)="this.commingSoonVisible = false" (click)="this.menuVisible = true" routerLink="/menu/personen"> <!-- This button hides Comming soon and shows the menu again -->
+        <div class="menuBtnsDiv" id="backBtnListCS">
+            <a class="menuBtns">Zurück</a>
+        </div>
+    </a>
+</div>
+  

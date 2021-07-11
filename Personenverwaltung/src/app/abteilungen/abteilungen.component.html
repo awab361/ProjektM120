@@ -1,0 +1,58 @@
+<div class="topnav">
+    <h1> Chur Tech </h1>
+    <a routerLink="/menu"class="active">Home</a>
+    <a routerLink="/menu/ueberuns">Über uns</a>
+    <a routerLink="/menu/kontakt">Kontakt</a>
+    <a routerLink="/menu/info">Info</a>
+    <div class="topnav-right">
+        <a routerLink="/" id="abmelden">abmelden</a>
+    </div>
+  </div>
+<div class="container">   
+</div>  
+<div id="personsMenu" *ngIf="this.menuVisible"> 
+  
+<a role="button" (click)="this.abteilungenListVisible = true" (click)="this.menuVisible = false" routerLink="/menu/abteilungen"> <!-- This button hides the menu and shows comming soon instead by changing the bools -->
+    <div class="menuBtnsDiv" id="firstMenuDiv">
+  <a class="menuBtns">Abteilungen Liste</a>
+</div>
+</a>
+
+<a role="button" (click)="this.commingSoonVisible = true" (click)="this.menuVisible= false" routerLink="/menu/abteilungen"> <!-- This button hides the menu and shows comming soon instead by changing the bools -->
+<div class="menuBtnsDiv">
+  <a class="menuBtns">Mitarbeitende pro Abteilung zeigen</a>
+</div>
+</a>
+<a routerLink="/menu">
+  <div class="menuBtnsDiv" id="backBtn">
+      <a class="menuBtns">Zurück</a>
+  </div>
+  </a>
+</div>
+
+<div id="abteilungenList" *ngIf="this.abteilungenListVisible"> 
+  <a role="button" (click)="this.abteilungenListVisible = false" (click)="this.menuVisible = true" routerLink="/menu/abteilungen">
+  <div class="menuBtnsDiv" id="backBtnList">
+      <a class="menuBtns">Zurück</a>
+  </div>
+  </a>
+  <ul>
+      <li *ngFor="let abteilung of abteilungen"> <!-- Thats a for loop to loop through the projects -->
+        <div class="abteilungObj">
+                <h2>{{abteilung.abteilung}}<br></h2>
+                <p><strong>anzahl Büros: </strong>{{abteilung.anzahlbueros}} <br></p>
+          </div>
+      </li>   
+    </ul>
+</div>
+
+<div *ngIf="this.commingSoonVisible">
+    <h1>COMMING SOON!</h1>
+
+    <a role="button" (click)="this.commingSoonVisible = false" (click)="this.menuVisible = true" routerLink="/menu/abteilungen">
+      <div class="menuBtnsDiv" id="backBtnListCS">
+        <a class="menuBtns">Zurück</a>
+    </div>
+    </a>
+</div>
+
