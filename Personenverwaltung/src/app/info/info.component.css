@@ -29,3 +29,6 @@
       margin-left: 40%;
       margin-top: 200px;
   }
+  .topnav-right {
+    float: right;
+  }
